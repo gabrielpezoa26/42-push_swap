@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/11 18:55:04 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/28 14:14:53 by gcesar-n         ###   ########.fr       */
+/*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
+/*   Updated: 2024/11/12 16:53:59 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifnfdef PUSH_SWAP_H
-# define PUSH_SWAP_H
+int	ft_isalpha(int c)
+{
+	if (((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')))
+	{
+		return (1);
+	}
+	return (0);
+}
 
-#include <unistd.h>
-#include <stdlib.h>
-
-#endif
+//verifica se o parâmetro é uma letra

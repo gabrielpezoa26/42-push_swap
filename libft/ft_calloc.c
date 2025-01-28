@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/11 18:55:04 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/28 14:14:53 by gcesar-n         ###   ########.fr       */
+/*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
+/*   Updated: 2024/11/12 17:18:26 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifnfdef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-#include <unistd.h>
-#include <stdlib.h>
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	void	*malloc_result;
+	size_t	malloc_size;
 
-#endif
+	if (nmemb != 0 && size != 0 && nmemb > (size_t) -1 / size)
+		return (NULL);
+	malloc_size = nmemb * size;
+	malloc_result = malloc(malloc_size);
+	if (malloc_result == NULL)
+		return (NULL);
+	ft_memset(malloc_result, 0, malloc_size);
+	return (malloc_result);
+}

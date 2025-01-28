@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/11 18:55:04 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/28 14:14:53 by gcesar-n         ###   ########.fr       */
+/*   Created: 2024/12/03 14:19:41 by gcesar-n          #+#    #+#             */
+/*   Updated: 2024/12/03 17:17:25 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifnfdef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-#include <unistd.h>
-#include <stdlib.h>
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*mango_loko;
 
-#endif
+	mango_loko = malloc(sizeof(t_list));
+	if (mango_loko == NULL)
+	{
+		return (NULL);
+	}
+	mango_loko->content = content;
+	mango_loko->next = NULL;
+	return (mango_loko);
+}
