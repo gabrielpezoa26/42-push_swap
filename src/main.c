@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 14:52:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/03 23:03:19 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/04 12:59:40 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(int argc, char **argv)
 
 /*
 	parser:  verifica se eh numero, qtde, aspas,
-	operações: implementar as 11
+	operações: implementar as 11 op
 	sorting: depende da qtde de numeros
 	tratar edge cases: sem input, já organizado, um nºo só
 */
