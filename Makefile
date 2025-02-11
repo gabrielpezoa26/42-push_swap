@@ -6,17 +6,17 @@
 #    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/11 18:55:02 by gcesar-n          #+#    #+#              #
-#    Updated: 2025/02/11 00:04:08 by gabriel          ###   ########.fr        #
+#    Updated: 2025/02/11 11:18:46 by gabriel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
 CC = cc
-# CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 
-SRC = src/main.c src/parser.c src/utils.c
-OBJECTS = src/main.o src/parser.o src/utils.o
+SRC = src/main.c src/parser.c src/utils.c src/op_swaps.c
+OBJECTS = src/main.o src/parser.o src/utils.o src/op_swaps.o
 
 all: $(NAME)
 

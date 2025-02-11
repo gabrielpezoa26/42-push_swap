@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 14:52:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/11 00:14:04 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/11 10:54:12 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int main(int argc, char **argv)
 		ft_printf("Stack value: %d\n", temp->value);
 		temp = temp->next;
 	}
-
 	free_stack(&stack);
 	return (0);
 }
