@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 23:43:14 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/11 00:17:56 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/11 00:21:07 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int is_number(char *str)
 		i++;
 	while (str[i] != '\0')
 	{
-		if (ft_isdigit(str[i]) != 0)
+		if (ft_isdigit(str[i]) == 0)
 			return (0);
 		i++;
 	}
