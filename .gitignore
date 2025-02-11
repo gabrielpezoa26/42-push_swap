@@ -1,4 +1,7 @@
 .vscode/
 
+libft.a
+
 *.o
+
 push_swap
