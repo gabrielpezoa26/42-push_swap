@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   op_pushes.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/03 22:16:32 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/11 18:53:18 by gcesar-n         ###   ########.fr       */
+/*   Created: 2025/02/11 16:40:51 by gcesar-n          #+#    #+#             */
+/*   Updated: 2025/02/11 17:27:38 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	has_duplicates(t_stack *stack, int n)
+static void push(t_stack **dest, t_stack**src)
 {
-	while (stack)
-	{
-		if (stack->value == n)
-			return (1);
-		stack = stack->next;
-	}
-	return (0);
+	t_stack *push_point;
+
+	if (*src == NULL)
+		return ;
+	push_point = *src;
+	*src = (*src)-> next;
+	if (*src != NULL)
+		(*src)->before = NULL;
+	push_point->before == NULL;
+	
 }
 
-void	free_stack(t_stack **stack)
+void	pa(t_stack_node **a, t_stack_node **b, bool print)
 {
-	t_stack	*temp;
+	push(a, b); 
+	if (!print) 
+		ft_printf("pa\n");
+}
 
-	while (*stack)
-	{
-		temp = *stack;
-		*stack = (*stack)->next;
-		free(temp);
-	}
+void	pb(t_stack_node **a, t_stack_node **b, bool print)
+{
+	push(b, a); 
+	if (!print) 
+		ft_printf("pb\n");
 }

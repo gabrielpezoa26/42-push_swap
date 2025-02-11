@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   op_swaps.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 10:42:10 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/11 10:57:38 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/11 18:29:30 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	sa(t_stack **stack)
 {
-	t_stack *first;
-	t_stack *second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 		return ;
@@ -29,8 +29,8 @@ void	sa(t_stack **stack)
 
 void	sb(t_stack **stack)
 {
-	t_stack *first;
-	t_stack *second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 		return ;

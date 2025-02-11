@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 23:43:14 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/11 10:54:18 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/11 18:30:50 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int is_number(char *str)
+static int	is_number(char *str)
 {
-	int i;
+	int	i;
 
-	if (str == NULL|| *str == '\0')
+	if (str == NULL || *str == '\0')
 		return (0);
 	i = 0;
 	if (str[i] == '-' || str[i] == '+')
@@ -30,9 +30,9 @@ int is_number(char *str)
 	return (1);
 }
 
-int validate_input(int argc, char **argv)
+int	validate_input(int argc, char **argv)
 {
-	int i;
+	int	i;
 
 	if (argc < 2)
 		return (1);
@@ -57,8 +57,8 @@ static long	ft_atol(const char *s, int *error)
 
 	result = 0;
 	sign = 1;
-	while (*s == ' ' || *s == '\t' || *s == '\n' || \
-			*s == '\r' || *s == '\f' || *s == '\v')
+	while (*s == ' ' || *s == '\t' || *s == '\n'
+		|| *s == '\r' || *s == '\f' || *s == '\v')
 		s++;
 	if (*s == '-' || *s == '+')
 	{
