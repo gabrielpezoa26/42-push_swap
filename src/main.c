@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:41:46 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/11 23:48:12 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/12 14:44:05 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -45,7 +44,6 @@ int	main(int argc, char **argv)
 	free_stack(&b);
 	return (0);
 }
-
 
 //TESTEEEE
 // void	potato_mango_teste(t_node *list)
@@ -84,4 +82,3 @@ int	main(int argc, char **argv)
 // 	free_stack(&b);
 // 	return (0);
 // }
-

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   op_swaps.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/11 10:42:10 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/11 23:34:40 by gabriel          ###   ########.fr       */
+/*   Created: 2025/02/11 10:42:10 by gcesar-n          #+#    #+#             */
+/*   Updated: 2025/02/12 14:43:23 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
 
 void	sa(t_node **stack, bool print)
 {

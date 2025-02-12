@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   op_rev_rotate.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/11 22:21:33 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/11 23:34:13 by gabriel          ###   ########.fr       */
+/*   Created: 2025/02/11 22:21:33 by gcesar-n          #+#    #+#             */
+/*   Updated: 2025/02/12 14:43:31 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
 
 static void	rev_rotate(t_node **stack)
 {
