@@ -6,11 +6,11 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 18:28:36 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/11 22:37:38 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/11 23:34:35 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	rotate(t_node **stack)
 {

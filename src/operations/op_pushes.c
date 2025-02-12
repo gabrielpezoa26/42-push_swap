@@ -6,11 +6,11 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 16:40:51 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/11 22:35:50 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/11 23:34:05 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	push(t_node **dest, t_node **src)
 {

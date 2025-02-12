@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 22:16:32 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/11 22:30:07 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/11 23:20:23 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,17 @@ t_node	*find_last(t_node *stack)
 	while (stack->next)
 		stack = stack->next;
 	return (stack);
+}
+
+int	list_size(t_node *list)
+{
+	int	count;
+
+	count = 0;
+	while (list)
+	{
+		count++;
+		list = list->next;
+	}
+	return (count);
 }

@@ -6,13 +6,14 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 10:42:10 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/11 22:30:07 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/11 23:34:40 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	sa(t_node **stack)
+
+void	sa(t_node **stack, bool print)
 {
 	t_node	*first;
 	t_node	*second;
@@ -24,10 +25,11 @@ void	sa(t_node **stack)
 	first->next = second->next;
 	second->next = first;
 	*stack = second;
-	ft_printf("sa\n");
+	if (!print)
+		ft_printf("sa\n");
 }
 
-void	sb(t_node **stack)
+void	sb(t_node **stack, bool print)
 {
 	t_node	*first;
 	t_node	*second;
@@ -39,12 +41,14 @@ void	sb(t_node **stack)
 	first->next = second->next;
 	second->next = first;
 	*stack = second;
-	ft_printf("sb\n");
+	if (!print)
+		ft_printf("sb\n");
 }
 
-void	ss(t_node **stack_a, t_node **stack_b)
+void	ss(t_node **stack_a, t_node **stack_b, bool print)
 {
-	sa(stack_a);
-	sb(stack_b);
-	ft_printf("ss\n");
+	sa(stack_a, true);
+	sb(stack_b, true);
+	if (!print)
+		ft_printf("ss\n");
 }
