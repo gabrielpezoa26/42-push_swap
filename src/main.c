@@ -6,13 +6,13 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:41:46 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/12 17:50:25 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:58:33 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_stack(t_stack **a, t_stack **b)
+void	decide_approach(t_stack **a, t_stack **b)
 {
 	int	size;
 
@@ -23,6 +23,8 @@ void	sort_stack(t_stack **a, t_stack **b)
 		sort_three(a);
 	else if (size == 5)
 		sort_five(a, b);
+	else if (size > 5)
+		radix_sort(a , b);
 }
 
 int	main(int argc, char **argv)
@@ -39,7 +41,7 @@ int	main(int argc, char **argv)
 		ft_printf("Errorrrr :( ");
 		return (1);
 	}
-	sort_stack(&a, &b);
+	decide_approach(&a, &b);
 	free_stack(&a);
 	free_stack(&b);
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:55:04 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 17:42:29 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:58:10 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ t_stack	*init_stack_a(char **argv);
 int		validate_input(int arg_count, char **arg_value);
 
 /*--------OPERATIONS--------*/
+void	decide_approach(t_stack **a, t_stack **b);
+
 // swap
 void	sa(t_stack **stack);
 void	sb(t_stack **stack);
@@ -55,7 +57,7 @@ void	sort_three(t_stack **list);
 void	sort_five(t_stack **a, t_stack **b);
 
 /*-------SORT_LARGE-------*/
-void	ft_radix(t_stack *list);
+void	radix_sort(t_stack **stack_a, t_stack **stack_b);
 
 /*---------UTILS--------*/
 int		has_duplicates(t_stack *stack, int n);

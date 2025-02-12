@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:53:45 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 17:46:33 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 18:09:14 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,14 @@ static int	count_bits(t_stack **potato)
 			max = top->index;
 		top = top->next;
 	}
+	ft_printf("\nsaiu primeiro while\n");
+	ft_printf("bit count:  %d\n", bit_count);
+	ft_printf("max:  %d\n", max);
 	while ((max >> bit_count) != 0)
+	{
 		bit_count++;
+	}
+	ft_printf("fimm\n");
 	return (bit_count);
 }
 
@@ -59,4 +65,5 @@ void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 			pa(stack_a, stack_b);
 		i++;
 	}
+	ft_printf("exittttt");
 }
