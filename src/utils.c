@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 22:16:32 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/11 23:20:23 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/11 23:47:15 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,26 @@ int	list_size(t_node *list)
 		list = list->next;
 	}
 	return (count);
+}
+
+void	assign_indices(t_node *list)
+{
+	t_node	*current;
+	t_node	*compare;
+	int		index;
+
+	current = list;
+	while (current)
+	{
+		index = 0;
+		compare = list;
+		while (compare)
+		{
+			if (compare->value < current->value)
+				index++;
+			compare = compare->next;
+		}
+		current->index = index;
+		current = current->next;
+	}
 }
