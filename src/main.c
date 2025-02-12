@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:41:46 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/12 16:14:53 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:38:16 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	sort_stack(t_stack **a, t_stack **b)
 	int	size;
 
 	size = list_size(*a);
+	ft_printf("sort_stack\n");
 	if (size == 2)
 		sa(a, true);
 	else if (size == 3)

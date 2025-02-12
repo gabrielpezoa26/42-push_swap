@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:52:11 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 16:14:53 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:37:44 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	sort_five(t_stack **a, t_stack **b)
 {
 	t_stack	*min;
 
+	ft_printf("sort five\n");
 	if (list_size(*a) != 5)
 		return ;
 	min = find_min(*a);
@@ -56,6 +57,7 @@ void	sort_three(t_stack **list)
 
 	if (!*list || !(*list)->next || !(*list)->next->next)
 		return ;
+	ft_printf("sort three\n");
 	a = (*list)->value;
 	b = (*list)->next->value;
 	c = (*list)->next->next->value;
