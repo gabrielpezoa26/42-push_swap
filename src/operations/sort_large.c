@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:53:45 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 16:14:53 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:21:38 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 
 	i = 0;
 	top_a = *stack_a;
-	size = ft_lstsize(top_a);
+	size = ft_lstsize_mod(top_a);
 	max_bits = count_bits(stack_a);
 	while (i < max_bits)
 	{
@@ -55,7 +55,7 @@ void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 			else
 				pb(stack_a, stack_b, true);
 		}
-		while (ft_lstsize(*stack_b) != 0)
+		while (ft_lstsize_mod(*stack_b) != 0)
 			pa(stack_a, stack_b, true);
 		i++;
 	}

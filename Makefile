@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
+#    By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/11 18:55:02 by gcesar-n          #+#    #+#              #
-#    Updated: 2025/02/11 23:54:34 by gabriel          ###   ########.fr        #
+#    Updated: 2025/02/12 17:20:27 by gcesar-n         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ CFLAGS = -Wall -Werror -Wextra
 SRCS = src/main.c src/parser.c src/utils.c \
 		src/operations/sort_small.c src/operations/sort_large.c \
 		src/operations/op_swaps.c src/operations/op_pushes.c \
-		src/operations/op_rotate.c src/operations/op_rev_rotate.c
+		src/operations/op_rotate.c src/operations/op_rev_rotate.c \
+		src/utils_list.c
 
 OBJ_DIR = objects
 OBJS = $(SRCS:src/%.c=$(OBJ_DIR)/%.o)

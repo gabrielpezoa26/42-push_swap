@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:55:04 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 16:18:53 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:22:47 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,14 +57,15 @@ void	sort_five(t_stack **a, t_stack **b);
 /*-------SORT_LARGE-------*/
 void	ft_radix(t_stack *list);
 
-// --------UTILS--------
+/*---------UTILS--------*/
 int		has_duplicates(t_stack *stack, int n);
 void	free_stack(t_stack **stack);
 t_stack	*find_last(t_stack *stack);
 int		list_size(t_stack *list);
 void	assign_indices(t_stack *list);
 
-int		list_size(t_stack *list);
+int		ft_lstsize_mod(t_stack *mango);
+
 //------TESTE-----
 // void potato_mango_teste(t_node *list);
 
