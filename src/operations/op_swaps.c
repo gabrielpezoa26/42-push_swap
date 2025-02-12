@@ -6,13 +6,13 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 10:42:10 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 17:22:58 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:46:52 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	sa(t_stack **stack, bool print)
+void	sa(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*second;
@@ -24,11 +24,10 @@ void	sa(t_stack **stack, bool print)
 	first->next = second->next;
 	second->next = first;
 	*stack = second;
-	if (!print)
-		ft_printf("sa\n");
+	ft_printf("sa\n");
 }
 
-void	sb(t_stack **stack, bool print)
+void	sb(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*second;
@@ -40,14 +39,12 @@ void	sb(t_stack **stack, bool print)
 	first->next = second->next;
 	second->next = first;
 	*stack = second;
-	if (!print)
-		ft_printf("sb\n");
+	ft_printf("sb\n");
 }
 
-void	ss(t_stack **stack_a, t_stack **stack_b, bool print)
+void	ss(t_stack **stack_a, t_stack **stack_b)
 {
-	sa(stack_a, true);
-	sb(stack_b, true);
-	if (!print)
-		ft_printf("ss\n");
+	sa(stack_a);
+	sb(stack_b);
+	ft_printf("ss\n");
 }

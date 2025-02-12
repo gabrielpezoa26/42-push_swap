@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:55:04 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 17:22:47 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:42:29 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,23 +32,23 @@ int		validate_input(int arg_count, char **arg_value);
 
 /*--------OPERATIONS--------*/
 // swap
-void	sa(t_stack **stack, bool print);
-void	sb(t_stack **stack, bool print);
-void	ss(t_stack **stack_a, t_stack **stack_b, bool print);
+void	sa(t_stack **stack);
+void	sb(t_stack **stack);
+void	ss(t_stack **stack_a, t_stack **stack_b);
 
 // pushes
-void	pa(t_stack **a, t_stack **b, bool print);
-void	pb(t_stack **a, t_stack **b, bool print);
+void	pa(t_stack **a, t_stack **b);
+void	pb(t_stack **a, t_stack **b);
 
 // rotate
-void	rb(t_stack **b, bool print);
-void	ra(t_stack **a, bool print);
-void	rr(t_stack **a, t_stack **b, bool print);
+void	rb(t_stack **b);
+void	ra(t_stack **a);
+void	rr(t_stack **a, t_stack **b);
 
 // reverse_rotate
-void	rra(t_stack **a, bool print);
-void	rrb(t_stack **b, bool print);
-void	rrr(t_stack **a, t_stack **b, bool print);
+void	rra(t_stack **a);
+void	rrb(t_stack **b);
+void	rrr(t_stack **a, t_stack **b);
 
 /*------SORT_SMALL--------*/
 void	sort_three(t_stack **list);

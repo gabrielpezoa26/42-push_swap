@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 16:40:51 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 16:14:53 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:43:50 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,14 @@ static void	push(t_stack **dest, t_stack **src)
 	*dest = push_point;
 }
 
-void	pa(t_stack **a, t_stack **b, bool print)
+void	pa(t_stack **a, t_stack **b)
 {
 	push(a, b);
-	if (!print)
-		ft_printf("pa\n");
+	ft_printf("pa\n");
 }
 
-void	pb(t_stack **a, t_stack **b, bool print)
+void	pb(t_stack **a, t_stack **b)
 {
 	push(b, a);
-	if (!print)
-		ft_printf("pb\n");
+	ft_printf("pb\n");
 }

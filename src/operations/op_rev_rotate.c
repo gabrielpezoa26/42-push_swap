@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:21:33 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 16:14:53 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:43:37 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,24 +28,21 @@ static void	rev_rotate(t_stack **stack)
 	*stack = last;
 }
 
-void	rra(t_stack **a, bool print)
+void	rra(t_stack **a)
 {
 	rev_rotate(a);
-	if (!print)
-		ft_printf("rra\n");
+	ft_printf("rra\n");
 }
 
-void	rrb(t_stack **b, bool print)
+void	rrb(t_stack **b)
 {
 	rev_rotate(b);
-	if (!print)
-		ft_printf("rrb\n");
+	ft_printf("rrb\n");
 }
 
-void	rrr(t_stack **a, t_stack **b, bool print)
+void	rrr(t_stack **a, t_stack **b)
 {
 	rev_rotate(a);
 	rev_rotate(b);
-	if (!print)
-		ft_printf("rrr\n");
+	ft_printf("rrr\n");
 }

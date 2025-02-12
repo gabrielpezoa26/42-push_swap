@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:52:11 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 17:37:44 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:45:46 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,18 @@ void	sort_five(t_stack **a, t_stack **b)
 		return ;
 	min = find_min(*a);
 	while (*a != min)
-		ra(a, true);
-	pb(a, b, true);
+		ra(a);
+	pb(a, b);
 	if (list_size(*a) == 4)
 	{
 		min = find_min(*a);
 		while (*a != min)
-			ra(a, true);
-		pb(a, b, true);
+			ra(a);
+		pb(a, b);
 	}
 	sort_three(a);
-	pa(a, b, true);
-	pa(a, b, true);
+	pa(a, b);
+	pa(a, b);
 }
 
 void	sort_three(t_stack **list)
@@ -63,18 +63,18 @@ void	sort_three(t_stack **list)
 	c = (*list)->next->next->value;
 	if (a > b && b > c)
 	{
-		sa(list, true);
-		rra(list, true);
+		sa(list);
+		rra(list);
 	}
 	else if (a > c && c > b)
-		ra(list, true);
+		ra(list);
 	else if (b > a && a > c)
 	{
-		sa(list, true);
-		ra(list, true);
+		sa(list);
+		ra(list);
 	}
 	else if (b > c && c > a)
-		rra(list, true);
+		rra(list);
 	else if (c > a && a > b)
-		sa(list, true);
+		sa(list);
 }

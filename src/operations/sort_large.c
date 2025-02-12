@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:53:45 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 17:21:38 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:46:33 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,12 @@ void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 		{
 			top_a = *stack_a;
 			if (((top_a->index >> i) & 1) == 1)
-				ra(stack_a, true);
+				ra(stack_a);
 			else
-				pb(stack_a, stack_b, true);
+				pb(stack_a, stack_b);
 		}
 		while (ft_lstsize_mod(*stack_b) != 0)
-			pa(stack_a, stack_b, true);
+			pa(stack_a, stack_b);
 		i++;
 	}
 }

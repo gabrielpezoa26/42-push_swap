@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 18:28:36 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 16:14:53 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:47:10 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,21 @@ static void	rotate(t_stack **stack)
 	last->next = first;
 }
 
-void	ra(t_stack **a, bool print)
+void	ra(t_stack **a)
 {
 	rotate(a);
-	if (!print)
-		ft_printf("ra\n");
+	ft_printf("ra\n");
 }
 
-void	rb(t_stack **b, bool print)
+void	rb(t_stack **b)
 {
 	rotate(b);
-	if (!print)
-		ft_printf("rb\n");
+	ft_printf("rb\n");
 }
 
-void	rr(t_stack **a, t_stack **b, bool print)
+void	rr(t_stack **a, t_stack **b)
 {
 	rotate(a);
 	rotate(b);
-	if (!print)
-		ft_printf("rr\n");
+	ft_printf("rr\n");
 }
