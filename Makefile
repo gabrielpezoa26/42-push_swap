@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+         #
+#    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/11 18:55:02 by gcesar-n          #+#    #+#              #
-#    Updated: 2025/02/11 16:41:16 by gcesar-n         ###   ########.fr        #
+#    Updated: 2025/02/11 22:24:40 by gabriel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 
-SRC = src/main.c src/parser.c src/utils.c src/op_swaps.c src/op_pushes.c
-OBJECTS = src/main.o src/parser.o src/utils.o src/op_swaps.o src/op_pushes.o
+SRC = src/main.c src/parser.c src/utils.c src/op_swaps.c src/op_pushes.c src/op_rev_rotate.c
+OBJECTS = src/main.o src/parser.o src/utils.o src/op_swaps.o src/op_pushes.o src/op_rev_rotate.o
 
 all: $(NAME)
 

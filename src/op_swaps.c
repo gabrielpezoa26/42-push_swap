@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   op_swaps.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 10:42:10 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/11 18:29:30 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/11 22:30:07 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_stack **stack)
+void	sa(t_node **stack)
 {
-	t_stack	*first;
-	t_stack	*second;
+	t_node	*first;
+	t_node	*second;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 		return ;
@@ -27,10 +27,10 @@ void	sa(t_stack **stack)
 	ft_printf("sa\n");
 }
 
-void	sb(t_stack **stack)
+void	sb(t_node **stack)
 {
-	t_stack	*first;
-	t_stack	*second;
+	t_node	*first;
+	t_node	*second;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 		return ;
@@ -42,7 +42,7 @@ void	sb(t_stack **stack)
 	ft_printf("sb\n");
 }
 
-void	ss(t_stack **stack_a, t_stack **stack_b)
+void	ss(t_node **stack_a, t_node **stack_b)
 {
 	sa(stack_a);
 	sb(stack_b);

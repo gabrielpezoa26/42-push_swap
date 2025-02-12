@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 23:43:14 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/11 18:30:50 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/11 22:46:42 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	is_number(char *str)
+static int	check_number(char *str)
 {
 	int	i;
 
@@ -39,9 +39,9 @@ int	validate_input(int argc, char **argv)
 	i = 1;
 	while (i < argc)
 	{
-		if (is_number(argv[i]) == 0)
+		if (check_number(argv[i]) == 0)
 		{
-			write(2, "Error\n", 6);
+			ft_printf("Errorrrr, not a number :(");
 			return (1);
 		}
 		ft_printf("Arg %d: %s\n", i, argv[i]);
@@ -78,12 +78,12 @@ static long	ft_atol(const char *s, int *error)
 	return (result * sign);
 }
 
-static void	append_node(t_stack **stack, int n)
+static void	append_node(t_node **stack, int n)
 {
-	t_stack	*node;
-	t_stack	*last_node;
+	t_node	*node;
+	t_node	*last_node;
 
-	node = malloc(sizeof(t_stack));
+	node = malloc(sizeof(t_node));
 	if (node == NULL)
 		return ;
 	node->next = NULL;
@@ -100,9 +100,9 @@ static void	append_node(t_stack **stack, int n)
 	}
 }
 
-t_stack	*init_stack_a(char **argv)
+t_node	*init_stack_a(char **argv)
 {
-	t_stack	*stack;
+	t_node	*stack;
 	long	n;
 	int		i;
 	int		error;

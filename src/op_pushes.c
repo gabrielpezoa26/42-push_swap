@@ -6,44 +6,32 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 16:40:51 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/11 21:42:03 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/11 22:35:50 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	push(t_stack **dest, t_stack **src)
+static void	push(t_node **dest, t_node **src)
 {
-	t_stack	*push_point;
+	t_node	*push_point;
 
-	if (!*src)
+	if (!src || !*src)
 		return ;
 	push_point = *src;
 	*src = (*src)->next;
-	if (*src)
-		(*src)->before = NULL;
-	push_point->before = NULL;
-	if (!*dest)
-	{
-		*dest = push_point;
-		push_point->next = NULL;
-	}
-	else
-	{
-		push_point->next = *dest;
-		push_point->next->before = push_point;
-		*dest = push_point;
-	}
+	push_point->next = *dest;
+	*dest = push_point;
 }
 
-void	pa(t_stack **a, t_stack **b, bool print)
+void	pa(t_node **a, t_node **b, bool print)
 {
-	push(a, b); 
-	if (!print) 
+	push(a, b);
+	if (!print)
 		ft_printf("pa\n");
 }
 
-void	pb(t_stack **a, t_stack **b, bool print)
+void	pb(t_node **a, t_node **b, bool print)
 {
 	push(b, a);
 	if (!print)

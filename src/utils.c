@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 22:16:32 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/11 18:53:18 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/11 22:30:07 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	has_duplicates(t_stack *stack, int n)
+int	has_duplicates(t_node *stack, int n)
 {
 	while (stack)
 	{
@@ -23,9 +23,9 @@ int	has_duplicates(t_stack *stack, int n)
 	return (0);
 }
 
-void	free_stack(t_stack **stack)
+void	free_stack(t_node **stack)
 {
-	t_stack	*temp;
+	t_node	*temp;
 
 	while (*stack)
 	{
@@ -33,4 +33,13 @@ void	free_stack(t_stack **stack)
 		*stack = (*stack)->next;
 		free(temp);
 	}
+}
+
+t_node	*find_last(t_node *stack)
+{
+	if (!stack)
+		return (NULL);
+	while (stack->next)
+		stack = stack->next;
+	return (stack);
 }
