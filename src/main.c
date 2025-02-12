@@ -6,13 +6,13 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:41:46 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/12 14:44:05 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 16:14:53 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_stack(t_node **a, t_node **b)
+void	sort_stack(t_stack **a, t_stack **b)
 {
 	int	size;
 
@@ -27,8 +27,8 @@ void	sort_stack(t_node **a, t_node **b)
 
 int	main(int argc, char **argv)
 {
-	t_node	*a;
-	t_node	*b;
+	t_stack	*a;
+	t_stack	*b;
 
 	if (validate_input(argc, argv) != 0)
 		return (1);

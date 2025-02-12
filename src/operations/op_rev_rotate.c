@@ -6,16 +6,16 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:21:33 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 14:43:31 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 16:14:53 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	rev_rotate(t_node **stack)
+static void	rev_rotate(t_stack **stack)
 {
-	t_node	*last;
-	t_node	*second_last;
+	t_stack	*last;
+	t_stack	*second_last;
 
 	if (!*stack || !(*stack)->next)
 		return ;
@@ -28,21 +28,21 @@ static void	rev_rotate(t_node **stack)
 	*stack = last;
 }
 
-void	rra(t_node **a, bool print)
+void	rra(t_stack **a, bool print)
 {
 	rev_rotate(a);
 	if (!print)
 		ft_printf("rra\n");
 }
 
-void	rrb(t_node **b, bool print)
+void	rrb(t_stack **b, bool print)
 {
 	rev_rotate(b);
 	if (!print)
 		ft_printf("rrb\n");
 }
 
-void	rrr(t_node **a, t_node **b, bool print)
+void	rrr(t_stack **a, t_stack **b, bool print)
 {
 	rev_rotate(a);
 	rev_rotate(b);

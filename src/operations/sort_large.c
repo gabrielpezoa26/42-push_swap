@@ -6,15 +6,15 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:53:45 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 16:02:40 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 16:14:53 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static int	count_bits(t_node **potato)
+static int	count_bits(t_stack **potato)
 {
-	t_node	*top;
+	t_stack	*top;
 	int		max;
 	int		bit_count;
 
@@ -32,9 +32,9 @@ static int	count_bits(t_node **potato)
 	return (bit_count);
 }
 
-void	radix_sort(t_node **stack_a, t_node **stack_b)
+void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 {
-	t_node	*top_a;
+	t_stack	*top_a;
 	int		i;
 	int		j;
 	int		size;
@@ -51,12 +51,12 @@ void	radix_sort(t_node **stack_a, t_node **stack_b)
 		{
 			top_a = *stack_a;
 			if (((top_a->index >> i) & 1) == 1)
-				ra(stack_a);
+				ra(stack_a, true);
 			else
-				pb(stack_a, stack_b);
+				pb(stack_a, stack_b, true);
 		}
 		while (ft_lstsize(*stack_b) != 0)
-			pa(stack_a, stack_b);
+			pa(stack_a, stack_b, true);
 		i++;
 	}
 }

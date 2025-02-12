@@ -6,13 +6,13 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 22:16:32 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/12 14:45:43 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 16:14:53 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	has_duplicates(t_node *stack, int n)
+int	has_duplicates(t_stack *stack, int n)
 {
 	while (stack)
 	{
@@ -23,9 +23,9 @@ int	has_duplicates(t_node *stack, int n)
 	return (0);
 }
 
-void	free_stack(t_node **stack)
+void	free_stack(t_stack **stack)
 {
-	t_node	*temp;
+	t_stack	*temp;
 
 	while (*stack)
 	{
@@ -35,7 +35,7 @@ void	free_stack(t_node **stack)
 	}
 }
 
-t_node	*find_last(t_node *stack)
+t_stack	*find_last(t_stack *stack)
 {
 	if (!stack)
 		return (NULL);
@@ -44,7 +44,7 @@ t_node	*find_last(t_node *stack)
 	return (stack);
 }
 
-int	list_size(t_node *list)
+int	list_size(t_stack *list)
 {
 	int	count;
 
@@ -57,10 +57,10 @@ int	list_size(t_node *list)
 	return (count);
 }
 
-void	assign_indices(t_node *list)
+void	assign_indices(t_stack *list)
 {
-	t_node	*current;
-	t_node	*compare;
+	t_stack	*current;
+	t_stack	*compare;
 	int		index;
 
 	current = list;

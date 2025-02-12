@@ -6,16 +6,17 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 10:42:10 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 14:43:23 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 16:14:53 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	sa(t_node **stack, bool print)
+
+void	sa(t_stack **stack, bool print)
 {
-	t_node	*first;
-	t_node	*second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 		return ;
@@ -28,10 +29,10 @@ void	sa(t_node **stack, bool print)
 		ft_printf("sa\n");
 }
 
-void	sb(t_node **stack, bool print)
+void	sb(t_stack **stack, bool print)
 {
-	t_node	*first;
-	t_node	*second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 		return ;
@@ -44,7 +45,7 @@ void	sb(t_node **stack, bool print)
 		ft_printf("sb\n");
 }
 
-void	ss(t_node **stack_a, t_node **stack_b, bool print)
+void	ss(t_stack **stack_a, t_stack **stack_b, bool print)
 {
 	sa(stack_a, true);
 	sb(stack_b, true);

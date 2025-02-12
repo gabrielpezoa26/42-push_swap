@@ -6,15 +6,15 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:52:11 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 14:42:36 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 16:14:53 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static t_node	*find_min(t_node *list)
+static t_stack	*find_min(t_stack *list)
 {
-	t_node	*min;
+	t_stack	*min;
 
 	min = list;
 	while (list)
@@ -26,9 +26,9 @@ static t_node	*find_min(t_node *list)
 	return (min);
 }
 
-void	sort_five(t_node **a, t_node **b)
+void	sort_five(t_stack **a, t_stack **b)
 {
-	t_node	*min;
+	t_stack	*min;
 
 	if (list_size(*a) != 5)
 		return ;
@@ -48,7 +48,7 @@ void	sort_five(t_node **a, t_node **b)
 	pa(a, b, true);
 }
 
-void	sort_three(t_node **list)
+void	sort_three(t_stack **list)
 {
 	int	a;
 	int	b;

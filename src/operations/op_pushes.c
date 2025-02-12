@@ -6,15 +6,15 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 16:40:51 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 14:34:16 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 16:14:53 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	push(t_node **dest, t_node **src)
+static void	push(t_stack **dest, t_stack **src)
 {
-	t_node	*push_point;
+	t_stack	*push_point;
 
 	if (!src || !*src)
 		return ;
@@ -24,14 +24,14 @@ static void	push(t_node **dest, t_node **src)
 	*dest = push_point;
 }
 
-void	pa(t_node **a, t_node **b, bool print)
+void	pa(t_stack **a, t_stack **b, bool print)
 {
 	push(a, b);
 	if (!print)
 		ft_printf("pa\n");
 }
 
-void	pb(t_node **a, t_node **b, bool print)
+void	pb(t_stack **a, t_stack **b, bool print)
 {
 	push(b, a);
 	if (!print)

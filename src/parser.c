@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 23:43:14 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/12 14:54:05 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 16:14:53 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,12 +78,12 @@ static long	ft_atol(const char *s, int *error)
 	return (result * sign);
 }
 
-static void	append_node(t_node **stack, int n)
+static void	append_node(t_stack **stack, int n)
 {
-	t_node	*node;
-	t_node	*last_node;
+	t_stack	*node;
+	t_stack	*last_node;
 
-	node = malloc(sizeof(t_node));
+	node = malloc(sizeof(t_stack));
 	if (node == NULL)
 		return ;
 	node->next = NULL;
@@ -100,9 +100,9 @@ static void	append_node(t_node **stack, int n)
 	}
 }
 
-t_node	*init_stack_a(char **argv)
+t_stack	*init_stack_a(char **argv)
 {
-	t_node	*stack;
+	t_stack	*stack;
 	long	n;
 	int		i;
 	int		error;

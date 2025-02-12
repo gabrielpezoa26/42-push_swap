@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 10:07:47 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/03 22:57:41 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/12 16:18:24 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_stack_node	*ft_last(t_stack_node *lst)
+t_listt	*ft_last(t_listt *lst)
 {
 	if (lst == NULL)
 		return (NULL);

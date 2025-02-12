@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:01:40 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/03 22:59:18 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/12 16:19:19 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,17 +56,17 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 
 //bonus
-typedef struct s_list
+typedef struct s_listt
 {
 	void			*content;
-	struct s_list	*next;
-}					t_list;
+	struct s_listt	*next;
+}					t_listt;
 
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-int		ft_lstsize(t_list *lst);
-t_list	*ft_last(t_list *lst);
-void	ft_lstadd_back(t_list **lst, t_list *new);
+t_listt	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_listt **lst, t_listt *new);
+int		ft_lstsize(t_listt *lst);
+t_listt	*ft_last(t_listt *lst);
+void	ft_lstadd_back(t_listt **lst, t_listt *new);
 
 //getnextline
 size_t	ft_strlength(const char *s);
