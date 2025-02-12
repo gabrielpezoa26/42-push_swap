@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:55:04 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 14:45:28 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 16:01:53 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 typedef struct s_stack
 {
-	int				number;
+	// int				number; // apagar*
 	int				index;
 	int				value;
 	struct s_stack	*next;
@@ -56,6 +56,7 @@ void	sort_three(t_node **list);
 void	sort_five(t_node **a, t_node **b);
 
 /*-------SORT_LARGE-------*/
+void	ft_radix(t_node *list);
 
 // --------UTILS--------
 int		has_duplicates(t_node *stack, int n);
