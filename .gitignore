@@ -4,6 +4,6 @@ libft.a
 
 *.o
 *.txt
-# .sh
+.sh
 
 push_swap

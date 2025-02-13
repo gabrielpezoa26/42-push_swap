@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🔥 Running Full push_swap Test with Move Counting (100-500 numbers) 🔥"
+echo " ---Running Full push_swap Test with Move Counting (100-500 numbers)--- "
 
 ### 🚀 Function to Test and Count Moves ###
 test_case() {
