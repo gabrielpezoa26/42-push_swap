@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:55:04 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 21:51:20 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/12 22:27:24 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ void	rrr(t_stack **a, t_stack **b);
 void	sort_three(t_stack **list);
 void	sort_four(t_stack **a, t_stack **b);
 void	sort_five(t_stack **a, t_stack **b);
+//sort_utils
+void execute_sort_three(t_stack **list);
 
 /*-------SORT_LARGE-------*/
 void	radix_sort(t_stack **stack_a, t_stack **stack_b);

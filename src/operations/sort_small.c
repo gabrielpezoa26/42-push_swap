@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:52:11 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 21:59:07 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/12 22:36:35 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,14 +69,15 @@ void sort_four(t_stack **a, t_stack **b)
 	pa(a, b);
 }
 
-void	sort_three(t_stack **list)
+
+
+
+void	execute_sort_three(t_stack **list)
 {
 	int	a;
 	int	b;
 	int	c;
 
-	if (!*list || !(*list)->next || !(*list)->next->next)
-		return ;
 	a = (*list)->value;
 	b = (*list)->next->value;
 	c = (*list)->next->next->value;
@@ -87,13 +88,23 @@ void	sort_three(t_stack **list)
 	}
 	else if (a > c && c > b)
 		ra(list);
+	else if (a > b && a < c)
+		sa(list);
 	else if (b > a && a > c)
+	{
+		sa(list);
+		rra(list);
+	}
+	else if (b > c && c > a)
 	{
 		sa(list);
 		ra(list);
 	}
-	else if (b > c && c > a)
-		rra(list);
-	else if (c > a && a > b)
-		sa(list);
+}
+
+void	sort_three(t_stack **list)
+{
+	if (!*list || !(*list)->next || !(*list)->next->next)
+		return ;
+	execute_sort_three(list);
 }
