@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/03 22:16:32 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/12 16:14:53 by gcesar-n         ###   ########.fr       */
+/*   Created: 2025/02/03 22:16:32 by gcesar-n          #+#    #+#             */
+/*   Updated: 2025/02/13 12:13:08 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ t_stack	*find_last(t_stack *stack)
 	return (stack);
 }
 
-int	list_size(t_stack *list)
+int	stack_size(t_stack *list)
 {
 	int	count;
 

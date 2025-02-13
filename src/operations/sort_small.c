@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:52:11 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 11:17:57 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/13 11:49:26 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	sort_three(t_stack **list)
 {
 	if (!*list || !(*list)->next || !(*list)->next->next)
 		return ;
-	execute_sort_three(list);
+	sort_three_helper(list);
 }
 
 void	sort_four(t_stack **a, t_stack **b)
@@ -58,13 +58,13 @@ void	sort_five(t_stack **a, t_stack **b)
 {
 	t_stack	*min;
 
-	if (list_size(*a) != 5)
+	if (stack_size(*a) != 5)
 		return ;
 	min = find_min(*a);
 	while (*a != min)
 		ra(a);
 	pb(a, b);
-	if (list_size(*a) == 4)
+	if (stack_size(*a) == 4)
 	{
 		min = find_min(*a);
 		while (*a != min)

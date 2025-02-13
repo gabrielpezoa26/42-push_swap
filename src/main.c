@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/11 23:41:46 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/13 11:18:34 by gabriel          ###   ########.fr       */
+/*   Created: 2025/02/11 23:41:46 by gcesar-n          #+#    #+#             */
+/*   Updated: 2025/02/13 12:12:56 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ static void	decide_approach(t_stack **a, t_stack **b)
 {
 	int	size;
 
-	if (is_sorted(a))
+	if (is_sorted(a) != 0)
 		return ;
-	size = list_size(*a);
+	size = stack_size(*a);
 	if (size == 2)
 	{
 		if ((*a)->value > (*a)->next->value)

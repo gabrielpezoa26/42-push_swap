@@ -40,4 +40,4 @@ for size in 100 250 500; do
     test_case "$ARG" "Random Unsorted ($size numbers)"
 done
 
-echo "✅ All tests completed!"
+echo " All tests completed!"

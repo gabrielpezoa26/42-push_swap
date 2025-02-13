@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:55:04 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 11:42:41 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/13 11:49:27 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,10 @@ void	radix(t_stack **stack_a, t_stack **stack_b);
 int		has_duplicates(t_stack *stack, int n);
 void	free_stack(t_stack **stack);
 t_stack	*find_last(t_stack *stack);
-int		list_size(t_stack *list);
+int		stack_size(t_stack *list);
 void	assign_indices(t_stack *list);
 
 /*--------SORT_UTILS----*/
-void	execute_sort_three(t_stack **list);
+void	sort_three_helper(t_stack **list);
 int		is_sorted(t_stack **list);
 #endif
