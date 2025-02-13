@@ -1,3 +1,0 @@
-Before sort_three: 2 3 1
-sa
-After sort_three: 3 2 1

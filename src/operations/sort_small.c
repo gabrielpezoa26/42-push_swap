@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:52:11 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 22:36:35 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/12 22:46:28 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,6 @@ void sort_four(t_stack **a, t_stack **b)
 	sort_three(a);
 	pa(a, b);
 }
-
-
-
 
 void	execute_sort_three(t_stack **list)
 {
