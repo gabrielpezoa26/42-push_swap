@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:52:11 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 00:02:42 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/13 11:17:57 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,32 @@ static t_stack	*find_min(t_stack *list)
 		list = list->next;
 	}
 	return (min);
+}
+
+void	sort_three(t_stack **list)
+{
+	if (!*list || !(*list)->next || !(*list)->next->next)
+		return ;
+	execute_sort_three(list);
+}
+
+void	sort_four(t_stack **a, t_stack **b)
+{
+	t_stack	*min;
+
+	min = find_min(*a);
+	if (*a == min)
+	{
+		pb(a, b);
+		sort_three(a);
+		pa(a, b);
+		return ;
+	}
+	while (*a != min)
+		ra(a);
+	pb(a, b);
+	sort_three(a);
+	pa(a, b);
 }
 
 void	sort_five(t_stack **a, t_stack **b)
@@ -49,59 +75,3 @@ void	sort_five(t_stack **a, t_stack **b)
 	pa(a, b);
 	pa(a, b);
 }
-
-void	sort_four(t_stack **a, t_stack **b)
-{
-	t_stack	*min;
-
-	min = find_min(*a);
-	if (*a == min)
-	{
-		pb(a, b);
-		sort_three(a);
-		pa(a, b);
-		return ;
-	}
-	while (*a != min)
-		ra(a);
-	pb(a, b);
-	sort_three(a);
-	pa(a, b);
-}
-
-void	sort_three(t_stack **list)
-{
-	if (!*list || !(*list)->next || !(*list)->next->next)
-		return ;
-	execute_sort_three(list);
-}
-
-// void	execute_sort_three(t_stack **list)
-// {
-// 	int	a;
-// 	int	b;
-// 	int	c;
-
-// 	a = (*list)->value;
-// 	b = (*list)->next->value;
-// 	c = (*list)->next->next->value;
-// 	if (a > b && b > c)
-// 	{
-// 		sa(list);
-// 		rra(list);
-// 	}
-// 	else if (a > c && c > b)
-// 		ra(list);
-// 	else if (a > b && a < c)
-// 		sa(list);
-// 	else if (b > a && a > c)
-// 	{
-// 		sa(list);
-// 		rra(list);
-// 	}
-// 	else if (b > c && c > a)
-// 	{
-// 		sa(list);
-// 		ra(list);
-// 	}
-// }

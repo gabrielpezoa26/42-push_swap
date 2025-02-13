@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:53:45 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 01:45:34 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/13 11:18:34 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int	count_bits(t_stack **stack)
 	return (bit_count);
 }
 
-void	radix_sort(t_stack **stack_a, t_stack **stack_b)
+void	radix(t_stack **stack_a, t_stack **stack_b)
 {
 	int		i;
 	int		j;

@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:41:46 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/13 01:46:59 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/13 11:18:34 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void	decide_approach(t_stack **a, t_stack **b)
 	else if (size > 5)
 	{
 		assign_indices(*a);
-		radix_sort(a, b);
+		radix(a, b);
 	}
 }
 

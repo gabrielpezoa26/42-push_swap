@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:55:04 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 01:46:56 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/13 11:18:35 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ t_stack	*init_stack_a(char **argv);
 int		validate_input(int arg_count, char **arg_value);
 
 /*--------OPERATIONS--------*/
-// void	decide_approach(t_stack **a, t_stack **b);
-
 // swap
 void	sa(t_stack **stack);
 void	sb(t_stack **stack);
@@ -40,12 +38,12 @@ void	ss(t_stack **stack_a, t_stack **stack_b);
 void	pa(t_stack **a, t_stack **b);
 void	pb(t_stack **a, t_stack **b);
 
-// rotate
+// rotates
 void	rb(t_stack **b);
 void	ra(t_stack **a);
 void	rr(t_stack **a, t_stack **b);
 
-// reverse_rotate
+// reverse_rotates
 void	rra(t_stack **a);
 void	rrb(t_stack **b);
 void	rrr(t_stack **a, t_stack **b);
@@ -59,7 +57,7 @@ void	execute_sort_three(t_stack **list);
 int		is_sorted(t_stack **list);
 
 /*-------SORT_LARGE-------*/
-void	radix_sort(t_stack **stack_a, t_stack **stack_b);
+void	radix(t_stack **stack_a, t_stack **stack_b);
 
 /*---------UTILS--------*/
 int		has_duplicates(t_stack *stack, int n);
