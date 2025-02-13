@@ -6,15 +6,15 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:41:46 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/12 21:01:11 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/12 21:51:44 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	decide_approach(t_stack **a, t_stack **b)
+void decide_approach(t_stack **a, t_stack **b)
 {
-	int	size;
+	int size;
 
 	size = list_size(*a);
 	if (size == 2)
@@ -24,6 +24,8 @@ void	decide_approach(t_stack **a, t_stack **b)
 	}
 	else if (size == 3)
 		sort_three(a);
+	else if (size == 4)
+		sort_four(a, b);
 	else if (size == 5)
 		sort_five(a, b);
 	else if (size > 5)

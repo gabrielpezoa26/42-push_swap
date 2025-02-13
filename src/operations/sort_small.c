@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:52:11 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 21:01:37 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/12 21:59:07 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static t_stack	*find_min(t_stack *list)
 {
 	t_stack	*min;
 
+	if (!list)  
+		return (NULL);
 	min = list;
 	while (list)
 	{
@@ -45,6 +47,25 @@ void	sort_five(t_stack **a, t_stack **b)
 	}
 	sort_three(a);
 	pa(a, b);
+	pa(a, b);
+}
+
+void sort_four(t_stack **a, t_stack **b)
+{
+	t_stack *min;
+
+	min = find_min(*a);
+	if (*a == min)
+	{
+		pb(a, b);
+		sort_three(a);
+		pa(a, b);
+		return;
+	}
+	while (*a != min)
+		ra(a);
+	pb(a, b);
+	sort_three(a);
 	pa(a, b);
 }
 
