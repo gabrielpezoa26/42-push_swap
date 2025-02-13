@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 23:43:14 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 17:04:54 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/13 17:12:16 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	validate_input(int argc, char **argv)
 	if (argc < 2)
 		return (1);
 	if (argc == 2 && !argv[1][0])
-		ft_printf("Errorr");
+		ft_printf("Error");
 	if (argc == 2 && argv[1][0])
 		argv = mango(argv);
 	i = 1;
