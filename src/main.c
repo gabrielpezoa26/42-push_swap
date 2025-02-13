@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:41:46 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 17:17:47 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/13 17:52:59 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int argc, char **argv)
 {
 	t_stack	*a;
 	t_stack	*b;
-	
+
 	if (validate_input(&argc, &argv) == 1)
 		return (1);
 	a = init_stack_a(argv + 1);

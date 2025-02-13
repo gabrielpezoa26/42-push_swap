@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 23:43:14 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 17:15:31 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/13 17:53:13 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static char	**mango(char **argv, int *argc)
 
 int	validate_input(int *argc, char ***argv)
 {
-	int	i;
+	int		i;
 	char	**new_argv;
 
 	if (*argc < 2)
@@ -77,29 +77,6 @@ int	validate_input(int *argc, char ***argv)
 	}
 	return (0);
 }
-
-// int	validate_input(int argc, char **argv)
-// {
-// 	int	i;
-
-// 	if (argc < 2)
-// 		return (1);
-// 	if (argc == 2 && !argv[1][0])
-// 		ft_printf("Error");
-// 	if (argc == 2 && argv[1][0])
-// 		argv = mango(argv);
-// 	i = 1;
-// 	while (i < argc)
-// 	{
-// 		if (check_number(argv[i]) == 0)
-// 		{
-// 			ft_printf("Error\n");
-// 			return (1);
-// 		}
-// 		i++;
-// 	}
-// 	return (0);
-// }
 
 static long	ft_atol(const char *s, int *error)
 {
