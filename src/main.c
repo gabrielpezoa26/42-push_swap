@@ -6,13 +6,13 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:41:46 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/13 01:03:14 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/13 01:46:59 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	decide_approach(t_stack **a, t_stack **b)
+static void	decide_approach(t_stack **a, t_stack **b)
 {
 	int	size;
 

@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:55:04 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 01:41:34 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/13 01:46:56 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_stack	*init_stack_a(char **argv);
 int		validate_input(int arg_count, char **arg_value);
 
 /*--------OPERATIONS--------*/
-void	decide_approach(t_stack **a, t_stack **b);
+// void	decide_approach(t_stack **a, t_stack **b);
 
 // swap
 void	sa(t_stack **stack);
