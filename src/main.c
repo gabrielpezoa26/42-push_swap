@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:41:46 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/12 17:58:33 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 21:01:11 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,19 @@ void	decide_approach(t_stack **a, t_stack **b)
 
 	size = list_size(*a);
 	if (size == 2)
-		sa(a);
+	{
+		if ((*a)->value > (*a)->next->value)
+			sa(a);
+	}
 	else if (size == 3)
 		sort_three(a);
 	else if (size == 5)
 		sort_five(a, b);
 	else if (size > 5)
-		radix_sort(a , b);
+	{
+		assign_indices(*a);
+		radix_sort(a, b);
+	}
 }
 
 int	main(int argc, char **argv)
@@ -33,12 +39,15 @@ int	main(int argc, char **argv)
 	t_stack	*b;
 
 	if (validate_input(argc, argv) != 0)
+	{
+		ft_printf("Error  :(\n");
 		return (1);
+	}
 	a = init_stack_a(argv + 1);
 	b = NULL;
 	if (!a)
 	{
-		ft_printf("Errorrrr :( ");
+		ft_printf("Error  :(\n");
 		return (1);
 	}
 	decide_approach(&a, &b);
