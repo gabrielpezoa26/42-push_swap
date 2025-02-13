@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 23:43:14 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 12:12:46 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/13 17:04:54 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,26 @@ static int	check_number(char *str)
 	return (1);
 }
 
+static char	**mango(char **argv)
+{
+	char	*new_argv;
+
+	new_argv = ft_strjoin("0 ", argv[1]);
+	argv = ft_split(new_argv, ' ');
+	free(new_argv);
+	return (argv);
+}
+
 int	validate_input(int argc, char **argv)
 {
 	int	i;
 
 	if (argc < 2)
 		return (1);
+	if (argc == 2 && !argv[1][0])
+		ft_printf("Errorr");
+	if (argc == 2 && argv[1][0])
+		argv = mango(argv);
 	i = 1;
 	while (i < argc)
 	{
