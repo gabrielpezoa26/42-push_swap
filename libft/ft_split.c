@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/31 20:14:27 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/13 18:06:59 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_countwords(char const *s, char delimeter)
+static size_t	ft_countwords(char const *s, char delimiter)
 {
 	size_t	num;
 	int		word;
@@ -21,12 +21,12 @@ static size_t	ft_countwords(char const *s, char delimeter)
 	word = 0;
 	while (*s)
 	{
-		if (*s != delimeter && word == 0)
+		if (*s != delimiter && word == 0)
 		{
 			word = 1;
 			num++;
 		}
-		else if (*s == delimeter)
+		else if (*s == delimiter)
 			word = 0;
 		s++;
 	}
@@ -64,7 +64,7 @@ static int	ft_fillwords(char **result, char const *s, char c)
 		{
 			result[word_index] = malloc(len + 1);
 			if (!result[word_index])
-				return (ft_free_memory(result, word_index), 1);
+				return (ft_free_memory(result, word_index), -1);
 			ft_strlcpy(result[word_index], s - len, len + 1);
 			word_index++;
 		}
@@ -81,8 +81,10 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	word_count = ft_countwords(s, c);
 	result = malloc((word_count + 1) * sizeof(char *));
-	if (result == NULL || ft_fillwords(result, s, c))
+	if (result == NULL)
 		return (NULL);
+	if (ft_fillwords(result, s, c) == -1)
+		return (ft_free_memory(result, word_count));
 	result[word_count] = NULL;
 	return (result);
 }
