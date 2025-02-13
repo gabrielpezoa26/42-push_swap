@@ -6,29 +6,11 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 17:55:23 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 18:14:29 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/13 18:21:03 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-static int	check_number(char *str)
-{
-	int	i;
-
-	if (str == NULL || *str == '\0')
-		return (0);
-	i = 0;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] != '\0')
-	{
-		if (ft_isdigit(str[i]) == 0)
-			return (0);
-		i++;
-	}
-	return (1);
-}
 
 static char	**parse_input_string(char **argv, int *argc)
 {
@@ -60,6 +42,24 @@ int	process_single_argument(int *argc, char ***argv)
 		return (1);
 	*argv = new_argv;
 	return (0);
+}
+
+static int	check_number(char *str)
+{
+	int	i;
+
+	if (str == NULL || *str == '\0')
+		return (0);
+	i = 0;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i] != '\0')
+	{
+		if (ft_isdigit(str[i]) == 0)
+			return (0);
+		i++;
+	}
+	return (1);
 }
 
 int	check_arguments(int argc, char **argv)
