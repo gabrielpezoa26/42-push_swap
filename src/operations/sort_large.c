@@ -6,19 +6,32 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 22:53:45 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/12 21:03:07 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/13 01:45:34 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static int	count_bits(t_stack **potato)
+static int	ft_lstsize_mod(t_stack *list)
+{
+	int	index;
+
+	index = 0;
+	while (list != NULL)
+	{
+		index++;
+		list = list->next;
+	}
+	return (index);
+}
+
+static int	count_bits(t_stack **stack)
 {
 	t_stack	*top;
 	int		max;
 	int		bit_count;
 
-	top = *potato;
+	top = *stack;
 	max = 0;
 	bit_count = 0;
 	while (top)

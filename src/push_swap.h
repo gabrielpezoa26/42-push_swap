@@ -6,18 +6,16 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:55:04 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 00:50:20 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/13 01:41:34 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
 # include "../libft/libft.h"
-# include <stdbool.h>
 
 typedef struct s_list
 {
@@ -69,10 +67,5 @@ void	free_stack(t_stack **stack);
 t_stack	*find_last(t_stack *stack);
 int		list_size(t_stack *list);
 void	assign_indices(t_stack *list);
-
-int		ft_lstsize_mod(t_stack *mango);
-
-//------TESTE-----
-// void potato_mango_teste(t_node *list);
 
 #endif
