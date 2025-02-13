@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 17:55:23 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 17:59:12 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/13 18:14:29 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	check_number(char *str)
 	return (1);
 }
 
-static char	**mango(char **argv, int *argc)
+static char	**parse_input_string(char **argv, int *argc)
 {
 	char	*new_argv;
 	char	**split_argv;
@@ -55,7 +55,7 @@ int	process_single_argument(int *argc, char ***argv)
 		ft_printf("Error\n");
 		return (1);
 	}
-	new_argv = mango(*argv, argc);
+	new_argv = parse_input_string(*argv, argc);
 	if (!new_argv)
 		return (1);
 	*argv = new_argv;
