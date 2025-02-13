@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:41:46 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/13 00:03:31 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/13 01:03:14 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	decide_approach(t_stack **a, t_stack **b)
 {
 	int	size;
 
+	if (is_sorted(a))
+		return ;
 	size = list_size(*a);
 	if (size == 2)
 	{

@@ -6,11 +6,25 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 22:09:31 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/13 00:22:57 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/13 01:09:33 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+int	is_sorted(t_stack **list)
+{
+	t_stack	*current;
+
+	current = *list;
+	while (current && current->next)
+	{
+		if (current->value > current->next->value)
+			return (0);
+		current = current->next;
+	}
+	return (1);
+}
 
 static void	handle_middle_in_second(t_stack **list)
 {
