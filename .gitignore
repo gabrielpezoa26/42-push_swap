@@ -3,5 +3,6 @@
 libft.a
 
 *.o
+*.txt
 
 push_swap
