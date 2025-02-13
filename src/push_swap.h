@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:55:04 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 17:53:26 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/13 17:59:03 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,9 @@ void	assign_indices(t_stack *list);
 /*--------SORT_UTILS----*/
 void	sort_three_helper(t_stack **list);
 int		is_sorted(t_stack **list);
+
+/*--------PARSE_UTILS----*/
+int		process_single_argument(int *argc, char ***argv);
+int		check_arguments(int argc, char **argv);
+
 #endif
