@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 23:43:14 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 17:12:16 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/13 17:15:31 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,30 +30,45 @@ static int	check_number(char *str)
 	return (1);
 }
 
-static char	**mango(char **argv)
+static char	**mango(char **argv, int *argc)
 {
 	char	*new_argv;
+	char	**split_argv;
 
 	new_argv = ft_strjoin("0 ", argv[1]);
-	argv = ft_split(new_argv, ' ');
+	if (!new_argv)
+		return (NULL);
+	split_argv = ft_split(new_argv, ' ');
 	free(new_argv);
-	return (argv);
+	*argc = 0;
+	while (split_argv[*argc])
+		(*argc)++;
+	return (split_argv);
 }
 
-int	validate_input(int argc, char **argv)
+int	validate_input(int *argc, char ***argv)
 {
 	int	i;
+	char	**new_argv;
 
-	if (argc < 2)
+	if (*argc < 2)
 		return (1);
-	if (argc == 2 && !argv[1][0])
-		ft_printf("Error");
-	if (argc == 2 && argv[1][0])
-		argv = mango(argv);
-	i = 1;
-	while (i < argc)
+	if (*argc == 2 && !(*argv)[1][0])
 	{
-		if (check_number(argv[i]) == 0)
+		ft_printf("Error\n");
+		return (1);
+	}
+	if (*argc == 2)
+	{
+		new_argv = mango(*argv, argc);
+		if (!new_argv)
+			return (1);
+		*argv = new_argv;
+	}
+	i = 1;
+	while (i < *argc)
+	{
+		if (check_number((*argv)[i]) == 0)
 		{
 			ft_printf("Error\n");
 			return (1);
@@ -62,6 +77,29 @@ int	validate_input(int argc, char **argv)
 	}
 	return (0);
 }
+
+// int	validate_input(int argc, char **argv)
+// {
+// 	int	i;
+
+// 	if (argc < 2)
+// 		return (1);
+// 	if (argc == 2 && !argv[1][0])
+// 		ft_printf("Error");
+// 	if (argc == 2 && argv[1][0])
+// 		argv = mango(argv);
+// 	i = 1;
+// 	while (i < argc)
+// 	{
+// 		if (check_number(argv[i]) == 0)
+// 		{
+// 			ft_printf("Error\n");
+// 			return (1);
+// 		}
+// 		i++;
+// 	}
+// 	return (0);
+// }
 
 static long	ft_atol(const char *s, int *error)
 {

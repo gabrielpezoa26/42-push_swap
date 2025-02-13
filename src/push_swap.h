@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:55:04 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 11:49:27 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/13 17:16:23 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ typedef struct s_list
 
 /*--------PARSER--------*/
 t_stack	*init_stack_a(char **argv);
-int		validate_input(int arg_count, char **arg_value);
+// int		validate_input(int arg_count, char **arg_value);
+int	validate_input(int *argc, char ***argv);
 
 /*--------OPERATIONS--------*/
 // swap
