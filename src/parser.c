@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 23:43:14 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/12 17:22:26 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/12 23:51:19 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	validate_input(int argc, char **argv)
 	{
 		if (check_number(argv[i]) == 0)
 		{
-			ft_printf("Errorrrrr, not a number :(");
+			ft_printf("Error\n");
 			return (1);
 		}
 		i++;
