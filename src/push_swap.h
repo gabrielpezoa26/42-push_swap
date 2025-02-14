@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:55:04 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 22:53:42 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/14 13:35:28 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,10 @@ typedef struct s_list
 	struct s_list	*next;
 }				t_stack;
 
-void	free_split_argv(char **split_argv);
-int		validate_input(int *argc, char ***argv, char ***split_argv_ref);
-
 /*--------PARSER--------*/
 t_stack	*init_stack_a(char **argv);
+void	free_split_argv(char **split_argv);
+int		validate_input(int *argc, char ***argv, char ***split_argv_ref);
 
 /*--------OPERATIONS--------*/
 // swap
