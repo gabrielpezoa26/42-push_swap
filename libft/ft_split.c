@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 18:06:59 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/13 21:25:05 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ static void	*ft_free_memory(char **array, int free_position)
 {
 	while (free_position >= 0)
 	{
-		free(array[free_position]);
+		if (array[free_position])
+			free(array[free_position]);
 		free_position--;
 	}
 	free(array);
@@ -64,13 +65,14 @@ static int	ft_fillwords(char **result, char const *s, char c)
 		{
 			result[word_index] = malloc(len + 1);
 			if (!result[word_index])
-				return (ft_free_memory(result, word_index), -1);
+				return (ft_free_memory(result, word_index - 1), -1);
 			ft_strlcpy(result[word_index], s - len, len + 1);
 			word_index++;
 		}
 	}
 	return (0);
 }
+
 
 char	**ft_split(char const *s, char c)
 {
