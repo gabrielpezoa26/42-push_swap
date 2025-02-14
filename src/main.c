@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:41:46 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 21:22:18 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/13 21:33:48 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,18 @@ static void	decide_approach(t_stack **a, t_stack **b)
 	}
 }
 
-static void free_split(char **split)
-{
-	int i;
+// static void free_split(char **split)
+// {
+// 	int i;
 
-	i = 0;
-	while(split[i])
-	{
-		free(split[i]);
-		i++;
-	}
-	free(split);
-}
+// 	i = 0;
+// 	while(split[i])
+// 	{
+// 		free(split[i]);
+// 		i++;
+// 	}
+// 	free(split);
+// }
 
 int	main(int argc, char **argv)
 {
@@ -57,14 +57,14 @@ int	main(int argc, char **argv)
 
 	if (validate_input(&argc, &argv) == 1)
 	{
-		free_split(argv);
+		// free_split(argv);
 		return (1);
 	}
 	a = init_stack_a(argv + 1);
 	b = NULL;
 	if (!a)
 	{
-		free_split(argv);
+		// free_split(argv);
 		ft_printf("Error\n");
 		return (1);
 	}
