@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_parse.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 17:55:23 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 18:14:29 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/13 22:54:05 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,19 @@ static int	check_number(char *str)
 
 static char	**parse_input_string(char **argv, int *argc)
 {
-	char	*new_argv;
+	char	*tmp_str;
 	char	**split_argv;
+	int		count;
 
-	new_argv = ft_strjoin("0 ", argv[1]);
-	if (!new_argv)
+	tmp_str = ft_strjoin("0 ", argv[1]);
+	if (!tmp_str)
 		return (NULL);
-	split_argv = ft_split(new_argv, ' ');
-	free(new_argv);
-	*argc = 0;
-	while (split_argv[*argc])
-		(*argc)++;
+	split_argv = ft_split(tmp_str, ' ');
+	free(tmp_str);
+	count = 0;
+	while (split_argv && split_argv[count])
+		count++;
+	*argc = count;
 	return (split_argv);
 }
 

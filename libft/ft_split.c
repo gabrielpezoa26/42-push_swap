@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 21:25:05 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/13 22:54:13 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ static int	ft_fillwords(char **result, char const *s, char c)
 	}
 	return (0);
 }
-
 
 char	**ft_split(char const *s, char c)
 {

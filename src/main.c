@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:41:46 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 21:33:48 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/13 22:53:29 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	decide_approach(t_stack **a, t_stack **b)
 {
 	int	size;
 
-	if (is_sorted(a) != 0)
+	if (is_sorted(a))
 		return ;
 	size = stack_size(*a);
 	if (size == 2)
@@ -30,47 +30,33 @@ static void	decide_approach(t_stack **a, t_stack **b)
 		sort_four(a, b);
 	else if (size == 5)
 		sort_five(a, b);
-	else if (size > 5)
+	else
 	{
 		assign_indices(*a);
 		radix(a, b);
 	}
 }
 
-// static void free_split(char **split)
-// {
-// 	int i;
-
-// 	i = 0;
-// 	while(split[i])
-// 	{
-// 		free(split[i]);
-// 		i++;
-// 	}
-// 	free(split);
-// }
-
 int	main(int argc, char **argv)
 {
 	t_stack	*a;
 	t_stack	*b;
+	char	**split_argv;
 
-	if (validate_input(&argc, &argv) == 1)
-	{
-		// free_split(argv);
+	split_argv = NULL;
+	if (validate_input(&argc, &argv, &split_argv) == 1)
 		return (1);
-	}
 	a = init_stack_a(argv + 1);
 	b = NULL;
 	if (!a)
 	{
-		// free_split(argv);
 		ft_printf("Error\n");
+		free_split_argv(split_argv);
 		return (1);
 	}
 	decide_approach(&a, &b);
 	free_stack(&a);
 	free_stack(&b);
-	// free_split(argv);
+	free_split_argv(split_argv);
 	return (0);
 }

@@ -3,23 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 23:43:14 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/13 18:14:33 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/13 22:53:52 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	validate_input(int *argc, char ***argv)
+void	free_split_argv(char **split_argv)
+{
+	int	i;
+
+	if (!split_argv)
+		return ;
+	i = 0;
+	while (split_argv[i])
+	{
+		free(split_argv[i]);
+		i++;
+	}
+	free(split_argv);
+}
+
+int	validate_input(int *argc, char ***argv, char ***split_argv_ref)
 {
 	if (*argc < 2)
 		return (1);
 	if (*argc == 2)
 	{
-		if (process_single_argument(argc, argv))
+		if (process_single_argument(argc, argv) == 1)
 			return (1);
+		*split_argv_ref = *argv;
 	}
 	return (check_arguments(*argc, *argv));
 }
