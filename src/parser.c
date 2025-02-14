@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 23:43:14 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/14 15:32:43 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:15:28 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ int	validate_input(int *argc, char ***argv, char ***split_argv_ref)
 		if (process_single_argument(argc, argv) == 1)
 			return (1);
 		*split_argv_ref = *argv;
+	}
+	if (check_arguments(*argc, *argv) == 1)
+	{
+		free_split_argv(*split_argv_ref);
+		return (1);
 	}
 	return (check_arguments(*argc, *argv));
 }
